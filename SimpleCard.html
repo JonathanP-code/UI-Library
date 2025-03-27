@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Card</title>
+    <style>
+        :root {
+            --card-bg-light: #ffffff;
+            --card-bg-dark: #2c2c2c;
+            --card-text-light: #333;
+            --card-text-dark: #fff;
+            --card-border-light: #ddd;
+            --card-border-dark: #444;
+            --card-btn-light: #007bff;
+            --card-btn-dark: #00bfff;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .card {
+            background-color: var(--card-bg-light);
+            color: var(--card-text-light);
+            border: 1px solid var(--card-border-light);
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .card button {
+            padding: 10px 15px;
+            background-color: var(--card-btn-light);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .card button:hover {
+            background-color: var(--card-btn-dark);
+        }
+
+        .dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        .dark-mode .card {
+            background-color: var(--card-bg-dark);
+            color: var(--card-text-dark);
+            border: 1px solid var(--card-border-dark);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Card Title</h2>
+        <p>This is a description of the card. It looks great in both light and dark mode!</p>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
