@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Button</title>
+    <style>
+        :root {
+            --bg-light: #f5f5f5;
+            --bg-dark: #1a1a1a;
+            --text-light: #333;
+            --text-dark: #fff;
+            --primary-light: #007bff;
+            --primary-dark: #00bfff;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .button {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            background: var(--primary-light);
+            color: white;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            background: var(--primary-dark);
+        }
+
+        .dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
