@@ -20,9 +20,8 @@ Welcome to the **UI Component Library**! This repository contains a collection o
 
 This project is licensed under the **MIT License** - see the LICENSE file for details.
 
-### 🤝 Contributing
-
-Contributions are welcome! If you find a bug or have suggestions, feel free to open an issue or submit a pull request.
+> [!NOTE]
+> Contributions are welcome! If you find a bug or have suggestions, feel free to open an issue or submit a pull request.
 
 ### 🌟 Show Your Support
 
